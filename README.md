@@ -38,7 +38,7 @@ GRANT ALL PRIVILEGES ON DATABASE security_test TO spring_user;
 - cd Estagio-Teste-API
 - Va em application.properties e veja se tem tem a configuração spring.datasource.url=jdbc:postgresql://localhost:5432/security_test
 - mvn clean install
-- mvn spring-boot:run (ou inicie o metodo principal)
+- mvn spring-boot:run
 > **Aplicação disponível em: http://localhost:8080*  
 
 
