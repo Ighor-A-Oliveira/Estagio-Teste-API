@@ -42,7 +42,7 @@ GRANT ALL PRIVILEGES ON DATABASE potencial_test TO spring_user;
 |--------|----------------------------------------|----------------------------------------|----------|
 | **POST** | `/user/register`                     | Cadastra usuário                       | Pública  |
 | **POST** | `/user/login`                        | Login → retorna JWT + refresh token    | Pública  |
-| **POST** | `/account/register`                  | Cria conta bancária (BOm fazer logo apos criar Usuario)                   | JWT      |
+| **POST** | `/account/register`                  | Cria conta bancária (Bom fazer logo apos criar Usuario)                   | JWT      |
 | **POST** | `/transaction/deposit`               | Depósito                               | JWT      |
 | **POST** | `/transaction/withdraw`              | Saque                                  | JWT      |
 | **POST** | `/transaction/internal-transfer`     | Transferência interna                  | JWT      |
@@ -54,21 +54,49 @@ GRANT ALL PRIVILEGES ON DATABASE potencial_test TO spring_user;
 ## Exemplos de payload
 
 ### Cadastro de usuário
+```json
 {
   "cpf": "12345678901",
   "email": "usuario@email.com",
   "password": "senha123"
 }
+```
 
 ### Cadastro de Conta (Precisa ser feito logo apos criacao do Usuario)
+```json
 {
   "cpf": "12345678901"
 }
+```
 
 ### Depósito ou Saque
+```json
 {
   "accountId": 1,
   "amount": 100.0
 }
+```
+
+### Transferência interna
+```json
+{
+  "fromAccountId": 1,
+  "toAccountId": 2,
+  "amount": 50.0
+}
+```
+
+### Transferencia Externa
+'''json
+{
+  "fromAccountId": 2,   
+  "amount": 250.00,                
+  "toBankCode": "001",             
+  "toAgency": "0001",              
+  "toAccountNumber": 987654,     
+  "toAccountHolderCpf": "11111111111" 
+}
+'''
+
 
 
