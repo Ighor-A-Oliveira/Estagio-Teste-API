@@ -30,12 +30,12 @@ CREATE USER spring_user WITH PASSWORD 'strongpassword';
 GRANT ALL PRIVILEGES ON DATABASE potencial_test TO spring_user;
 ```
 
-# Como rodar
-git clone https://github.com/Ighor-A-Oliveira/Potencial-Teste-API.git
-cd SEU_REPOSITORIO
-mvn clean install
-mvn spring-boot:run ou inicie o metodo principal
-Aplicação: http://localhost:8080
+## Como rodar
+- git clone https://github.com/Ighor-A-Oliveira/Potencial-Teste-API.git
+- cd SEU_REPOSITORIO
+- mvn clean install
+- mvn spring-boot:run (ou inicie o metodo principal)
+- Aplicação: http://localhost:8080
 
 
 #Endpoints da API
