@@ -41,7 +41,7 @@ public class TransactionService {
         String username = auth != null ? auth.getName() : "ANÔNIMO";
 
         //Aqui tento procurar pela conta que vai receber o deposito
-        Account account = accountRepository.findById(depositRequest.toAccountId())
+        Account account = accountRepository.findById(depositRequest.fromAccountId())
                 .orElseThrow(() -> new IllegalArgumentException("Conta não encontrada"));
 
         //Checa se o valor do deposito eh positivo
@@ -101,7 +101,7 @@ public class TransactionService {
 
 
         //Aqui tento procurar pela conta que vai receber o deposito
-        Account account = accountRepository.findById(withdrawRequest.toAccountId())
+        Account account = accountRepository.findById(withdrawRequest.fromAccountId())
                 .orElseThrow(() -> new IllegalArgumentException("Conta não encontrada"));
 
         //Checa se o valor do saque eh positivo
