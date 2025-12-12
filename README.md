@@ -40,27 +40,15 @@ GRANT ALL PRIVILEGES ON DATABASE potencial_test TO spring_user;
 
 ## Endpoints da API
 
-### POST /user/register
--Cadastro de usuário
--Campos: name, cpf, password
+| Método | Rota                                   | Descrição                              | Auth     |
+|--------|----------------------------------------|----------------------------------------|----------|
+| **POST** | `/user/register`                     | Cadastra usuário                       | Pública  |
+| **POST** | `/user/login`                        | Login → retorna JWT + refresh token     | Pública  |
+| **POST** | `/account/register`                  | Cria conta bancária                    | JWT      |
+| **POST** | `/transaction/deposit`               | Depósito                               | JWT      |
+| **POST** | `/transaction/withdraw`              | Saque                                  | JWT      |
+| **POST** | `/transaction/internal-transfer`     | Transferência interna                  | JWT      |
+| **POST** | `/transaction/external-transfer`     | Transferência externa (simulada)       | JWT      |
 
-### POST /user/login
--Login com CPF e senha
--Retorna access + refresh token
-
-### POST /account/register
--Cria conta bancária
--JWT obrigatório
-
-### POST /transaction/deposit
--Realiza depósito
-
-### POST /transaction/withdraw
--Realiza saque
-
-### POST /transaction/internal-transfer
--Transferência entre contas da mesma instituição
-
-### POST /transaction/external-transfer
--Transferência para outro banco (simulada)
--Todos os endpoints protegidos precisam do header: Authorization: Bearer <seu_token_jwt>
+> **Header obrigatório nas rotas protegidas**  
+> `Authorization: Bearer <token>`
