@@ -64,7 +64,7 @@ GRANT ALL PRIVILEGES ON DATABASE security_test TO spring_user;
 {
   "name": "ighor",
   "email": "usuario@email.com",
-  "password": "senha123"
+  "password": "senha123",
   "cpf": "12345678901"
 }
 ```
