@@ -36,6 +36,7 @@ GRANT ALL PRIVILEGES ON DATABASE security_test TO spring_user;
 ## Como rodar
 - git clone https://github.com/Ighor-A-Oliveira/Potencial-Teste-API.git
 - cd SEU_REPOSITORIO
+- Va em application.properties e veja se tem tem a configuração spring.datasource.url=jdbc:postgresql://localhost:5432/security_test
 - mvn clean install
 - mvn spring-boot:run (ou inicie o metodo principal)
 > **Aplicação disponível em: http://localhost:8080*  
@@ -110,6 +111,7 @@ GRANT ALL PRIVILEGES ON DATABASE security_test TO spring_user;
 ```bash
 git clone https://github.com/Ighor-A-Oliveira/Potencial-Teste-API.git
 cd Potencial-Teste-API
+Va em application.properties e veja se tem tem a configuração spring.datasource.url=jdbc:postgresql://db:5432/security_test
 
 # Sobe banco + API em containers
 docker-compose up -d --build
