@@ -13,8 +13,6 @@ API REST de carteira digital desenvolvida como teste técnico para a Potencial.
 - Depósito, saque, transferência interna e externa
 - JWT + Refresh Token com rotação
 - Validações completas e tratamento de erros
-- Testes unitários e de integração
-- Documentação Swagger
 
 ## Pré-requisitos
 | Ferramenta   | Versão mínima | Verificar com       |
