@@ -110,7 +110,7 @@ GRANT ALL PRIVILEGES ON DATABASE security_test TO spring_user;
 
 ```bash
 git clone https://github.com/Ighor-A-Oliveira/Potencial-Teste-API.git
-cd Potencial-Teste-API
+cd repo_folder
 Va em application.properties e veja se tem tem a configuração spring.datasource.url=jdbc:postgresql://db:5432/security_test
 
 # Sobe banco + API em containers
