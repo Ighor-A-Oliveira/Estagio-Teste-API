@@ -1,6 +1,6 @@
-# Potencial - Teste Técnico API
+# Teste Técnico API Para Estagio
 
-API REST de carteira digital desenvolvida como teste técnico para a Potencial.
+API REST de carteira digital desenvolvida como teste técnico para processo de estagio.
 
 [![Java 21](https://img.shields.io/badge/Java-21-blue.svg)](https://www.oracle.com/java/)
 [![Spring Boot 3](https://img.shields.io/badge/Spring_Boot-3.3+-green)](https://spring.io/projects/spring-boot)
