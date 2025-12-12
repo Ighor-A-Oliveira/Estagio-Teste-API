@@ -67,46 +67,49 @@ http://localhost:8080
 
 ### Endpoints da API
 
-<div></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 18px; margin: 30px 0;">
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;margin:30px 0">
+  <div style="border-radius: 10px; padding: 18px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+    <strong style="font-size: 1.1em;">POST</strong> <code style="background:rgba(255,255,255,0.2);padding:4px 8px;border-radius:4px;">/user/register</code><br><br>
+    Cadastro de novo usuário<br>
+    <small>Campos: name, cpf, password</small>
+  </div>
 
-<div style="border:1px solid #e1e4e8;border-left:5px solid #28a745;padding:16px;border-radius:6px;background:#f6fff8">
-<strong>POST</strong> <code>/user/register</code><br>
-Cadastro de novo usuário (nome, cpf, senha)
+  <div style="border-radius: 10px; padding: 18px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+    <strong style="font-size: 1.1em;">POST</strong> <code style="background:rgba(255,255,255,0.2);padding:4px 8px;border-radius:4px;">/user/login</code><br><br>
+    Login com CPF e senha<br>
+    Retorna access + refresh token
+  </div>
+
+  <div style="border-radius: 10px; padding: 18px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+    <strong style="font-size: 1.1em;">POST</strong> <code style="background:rgba(255,255,255,0.2);padding:4px 8px;border-radius:4px;">/account/register</code><br><br>
+    Cria conta bancária<br>
+    <strong>Autenticação necessária</strong>
+  </div>
+
+  <div style="border-radius: 10px; padding: 18px; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+    <strong style="font-size: 1.1em;">POST</strong> <code style="background:rgba(255,255,255,0.2);padding:4px 8px;border-radius:4px;">/transaction/deposit</code><br><br>
+    Realiza depósito na conta
+  </div>
+
+  <div style="border-radius: 10px; padding: 18px; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+    <strong style="font-size: 1.1em;">POST</strong> <code style="background:rgba(255,255,255,0.2);padding:4px 8px;border-radius:4px;">/transaction/withdraw</code><br><br>
+    Realiza saque da conta
+  </div>
+
+  <div style="border-radius: 10px; padding: 18px; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+    <strong style="font-size: 1.1em;">POST</strong> <code style="background:rgba(0,0,0,0.1);padding:4px 8px;border-radius:4px;">/transaction/internal-transfer</code><br><br>
+    Transferência entre contas da mesma instituição
+  </div>
+
+  <div style="border-radius: 10px; padding: 18px; background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+    <strong style="font-size: 1.1em;">POST</strong> <code style="background:rgba(255,255,255,0.2);padding:4px 8px;border-radius:4px;">/transaction/external-transfer</code><br><br>
+    Transferência para outro banco (simulada)
+  </div>
+
 </div>
 
-<div style="border:1px solid #e1e4e8;border-left:5px solid #0366d6;padding:16px;border-radius:6px;background:#f6f8ff">
-<strong>POST</strong> <code>/user/login</code><br>
-Login com CPF → retorna JWT + refresh token
-</div>
-
-<div style="border:1px solid #e1e4e8;border-left:5px solid #6f42c1;padding:16px;border-radius:6px;background:#faf8ff">
-<strong>POST</strong> <code>/account/register</code><br>
-Cria conta bancária para o usuário logado
-</div>
-
-<div style="border:1px solid #e1e4e8;border-left:5px solid #d73a49;padding:16px;border-radius:6px;background:#fff8f8">
-<strong>POST</strong> <code>/transaction/deposit</code><br>
-Depósito em conta
-</div>
-
-<div style="border:1px solid #e1e4e8;border-left:5px solid #d73a49;padding:16px;border-radius:6px;background:#fff8f8">
-<strong>POST</strong> <code>/transaction/withdraw</code><br>
-Saque da conta
-</div>
-
-<div style="border:1px solid #e1e4e8;border-left:5px solid #f9a03f;padding:16px;border-radius:6px;background:#fffbf5">
-<strong>POST</strong> <code>/transaction/internal-transfer</code><br>
-Transferência entre contas da mesma instituição
-</div>
-
-<div style="border:1px solid #e1e4e8;border-left:5px solid #f9826c;padding:16px;border-radius:6px;background:#fff8f8">
-<strong>POST</strong> <code>/transaction/external-transfer</code><br>
-Transferência para outro banco (simulada)
-</div>
-
-</div>
+> Todos os endpoints de transação exigem token JWT no header: `Authorization: Bearer <token>`
 
 
 Variáveis de ambiente
