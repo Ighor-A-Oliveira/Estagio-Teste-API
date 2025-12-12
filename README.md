@@ -22,7 +22,7 @@ API REST de carteira digital desenvolvida como teste técnico para processo de e
 | Ferramenta   | Versão mínima | Comando de verificação |
 |--------------|---------------|-------------------------|
 | Java JDK     | 21            | `java -version`        |
-| Maven        | 3.8+         | `mvn -v`               |
+| Maven        | 3.9+         | `mvn -v`               |
 | PostgreSQL   | 15+           | `psql --version`       |
 | Docker (opcional) | Latest      | `docker --version`     |
 
