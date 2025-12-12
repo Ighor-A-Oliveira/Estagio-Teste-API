@@ -37,16 +37,21 @@ GRANT ALL PRIVILEGES ON DATABASE security_test TO spring_user;
 - mvn spring-boot:run
 > **Aplicação disponível em: http://localhost:8080*
 
-## Application.Properties
--spring.application.name=teste-tecnico-api-spring
--#Local Host
--spring.datasource.url=jdbc:postgresql://localhost:5432/security_test
--#Docker Compose
--#spring.datasource.url=jdbc:postgresql://db:5432/security_test
--spring.datasource.username=spring_user
--spring.datasource.password=strongpassword
--spring.datasource.driver-class-name=org.postgresql.Driver
--spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+## Application.properties
+
+```properties
+spring.application.name=teste-tecnico-api-spring
+
+# Local Host
+spring.datasource.url=jdbc:postgresql://localhost:5432/security_test
+
+# Docker Compose
+#spring.datasource.url=jdbc:postgresql://db:5432/security_test
+
+spring.datasource.username=spring_user
+spring.datasource.password=strongpassword
+spring.datasource.driver-class-name=org.postgresql.Driver
+```
 
 
 ## Endpoints da API 
